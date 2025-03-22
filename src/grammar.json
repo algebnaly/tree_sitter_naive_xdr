@@ -46,8 +46,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "enum"
+          "type": "SYMBOL",
+          "name": "keyword_enum"
         },
         {
           "type": "SYMBOL",
@@ -58,17 +58,18 @@
           "value": "{"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_enum_variant_dec"
-          }
+          "type": "SYMBOL",
+          "name": "_enum_variant_dec"
         },
         {
           "type": "STRING",
           "value": "}"
         }
       ]
+    },
+    "keyword_enum": {
+      "type": "STRING",
+      "value": "enum"
     },
     "_enum_variant_dec": {
       "type": "SEQ",
@@ -84,6 +85,38 @@
         {
           "type": "SYMBOL",
           "name": "number"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "identifier"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "="
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "number"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
