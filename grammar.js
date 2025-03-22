@@ -17,7 +17,8 @@ module.exports = grammar({
     source_file: ($) => repeat($.statement),
     statement: ($) => choice(
       $.block_comment,
-      $.enum
+      $.enum,
+      $.struct
     ),
     block_comment: ($) => token(
       seq(
@@ -50,7 +51,7 @@ module.exports = grammar({
       $.keyword_struct,
       $.struct_name,
       "{",
-      repeat(""),
+      repeat($.struct_member),
       "}"
     ),
     keyword_struct: ($) => "struct",

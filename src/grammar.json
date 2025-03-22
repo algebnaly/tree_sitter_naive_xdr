@@ -19,6 +19,10 @@
         {
           "type": "SYMBOL",
           "name": "enum"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "struct"
         }
       ]
     },
@@ -142,8 +146,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "STRING",
-            "value": ""
+            "type": "SYMBOL",
+            "name": "struct_member"
           }
         },
         {
