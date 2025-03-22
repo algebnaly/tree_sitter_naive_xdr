@@ -47,13 +47,13 @@ module.exports = grammar({
       )))
     ),
     struct: ($) => seq(
-      $.struct_keyword,
+      $.keyword_struct,
       $.struct_name,
       "{",
       repeat(""),
       "}"
     ),
-    struct_keyword: ($) => "struct",
+    keyword_struct: ($) => "struct",
     struct_name: ($) => $.identifier,
     struct_member: ($) => seq(
       $.type_specifier,

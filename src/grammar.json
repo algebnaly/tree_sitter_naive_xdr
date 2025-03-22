@@ -129,7 +129,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "struct_keyword"
+          "name": "keyword_struct"
         },
         {
           "type": "SYMBOL",
@@ -152,7 +152,7 @@
         }
       ]
     },
-    "struct_keyword": {
+    "keyword_struct": {
       "type": "STRING",
       "value": "struct"
     },
