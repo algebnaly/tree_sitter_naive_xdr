@@ -124,6 +124,63 @@
         }
       ]
     },
+    "struct": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "struct_keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "struct_name"
+        },
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "STRING",
+            "value": ""
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "struct_keyword": {
+      "type": "STRING",
+      "value": "struct"
+    },
+    "struct_name": {
+      "type": "SYMBOL",
+      "name": "identifier"
+    },
+    "struct_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "type_specifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        }
+      ]
+    },
+    "type_specifier": {
+      "type": "SYMBOL",
+      "name": "identifier"
+    },
     "identifier": {
       "type": "PATTERN",
       "value": "[A-Za-z]+[_A-Za-z]*"

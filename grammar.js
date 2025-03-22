@@ -46,6 +46,21 @@ module.exports = grammar({
         $.number,
       )))
     ),
+    struct: ($) => seq(
+      $.struct_keyword,
+      $.struct_name,
+      "{",
+      repeat(""),
+      "}"
+    ),
+    struct_keyword: ($) => "struct",
+    struct_name: ($) => $.identifier,
+    struct_member: ($) => seq(
+      $.type_specifier,
+      $.identifier,
+      ";"
+    ),
+    type_specifier: ($) => $.identifier,
     identifier: ($) => /[A-Za-z]+[_A-Za-z]*/,
     number: ($) => choice("0", /[1-9]+[0-9]*/),
   },
