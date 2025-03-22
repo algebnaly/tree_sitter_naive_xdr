@@ -1,5 +1,28 @@
 [
   {
+    "type": "const_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "keyword_const",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "enum",
     "named": true,
     "fields": {},
@@ -72,6 +95,10 @@
       "types": [
         {
           "type": "block_comment",
+          "named": true
+        },
+        {
+          "type": "const_statement",
           "named": true
         },
         {
@@ -180,6 +207,10 @@
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "keyword_const",
     "named": true
   },
   {

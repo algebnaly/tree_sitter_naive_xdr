@@ -23,6 +23,10 @@
         {
           "type": "SYMBOL",
           "name": "struct"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "const_statement"
         }
       ]
     },
@@ -184,6 +188,35 @@
     "type_specifier": {
       "type": "SYMBOL",
       "name": "identifier"
+    },
+    "const_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "keyword_const"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_specifier"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        }
+      ]
+    },
+    "keyword_const": {
+      "type": "STRING",
+      "value": "const"
     },
     "identifier": {
       "type": "PATTERN",

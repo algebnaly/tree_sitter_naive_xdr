@@ -18,7 +18,8 @@ module.exports = grammar({
     statement: ($) => choice(
       $.block_comment,
       $.enum,
-      $.struct
+      $.struct,
+      $.const_statement
     ),
     block_comment: ($) => token(
       seq(
@@ -62,6 +63,14 @@ module.exports = grammar({
       ";"
     ),
     type_specifier: ($) => $.identifier,
+    const_statement: ($) => seq(
+      $.keyword_const,
+      $.type_specifier,
+      "=",
+      $.identifier,
+      ";"
+    ),
+    keyword_const: ($) => "const",
     identifier: ($) => /[A-Za-z]+[_A-Za-z]*/,
     number: ($) => choice("0", /[1-9]+[0-9]*/),
   },
