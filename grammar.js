@@ -28,12 +28,13 @@ module.exports = grammar({
     ),
     enum: ($) => seq(
       $.keyword_enum,
-      $.identifier,
+      $.enum_name,
       "{",
       $._enum_variant_dec,
       "}"
     ),
     keyword_enum: ($) => "enum",
+    enum_name: ($) => $.identifier,
     _enum_variant_dec: ($) => seq(
       $.identifier,
       "=",
