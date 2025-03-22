@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "naive_xdr",
+      "camelcase": "NaiveXdr",
+      "title": "NaiveXdr",
+      "scope": "source.naive_xdr",
+      "file-types": [
+        "xdr"
+      ],
+      "injection-regex": "^naive_xdr$",
+      "class-name": "TreeSitterNaiveXdr"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Naive XDR tree-sitter implementation",
+    "authors": [
+      {
+        "name": "algebnaly",
+        "email": "mail@algebnaly.com",
+        "url": "https://blog.algebnaly.com/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-naive_xdr"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
