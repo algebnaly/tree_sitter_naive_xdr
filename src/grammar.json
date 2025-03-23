@@ -718,7 +718,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[A-Za-z]+[_A-Za-z]*"
+      "value": "[A-Za-z]+[_A-Za-z0-9]*"
     },
     "block_comment": {
       "type": "TOKEN",

@@ -99,7 +99,7 @@ module.exports = grammar({
     keyword_enum: ($) => "enum",
     keyword_struct: ($) => "struct",
     keyword_default: ($) => "default",
-    identifier: ($) => /[A-Za-z]+[_A-Za-z]*/,
+    identifier: ($) => /[A-Za-z]+[_A-Za-z0-9]*/,
     block_comment: ($) => token(seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
   },
 });
