@@ -121,6 +121,10 @@
           "named": true
         },
         {
+          "type": "program_def",
+          "named": true
+        },
+        {
           "type": "type_def",
           "named": true
         }
@@ -160,6 +164,102 @@
         },
         {
           "type": "keyword_enum",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "proc_firstarg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "keyword_void",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "proc_return",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "keyword_void",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "proc_firstarg",
+          "named": true
+        },
+        {
+          "type": "proc_return",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "program_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "keyword_program",
+          "named": true
+        },
+        {
+          "type": "version_def",
           "named": true
         }
       ]
@@ -355,6 +455,33 @@
     }
   },
   {
+    "type": "version_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "keyword_version",
+          "named": true
+        },
+        {
+          "type": "procedure_def",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "(",
     "named": false
   },
@@ -456,6 +583,10 @@
     "named": true
   },
   {
+    "type": "keyword_program",
+    "named": true
+  },
+  {
     "type": "keyword_string",
     "named": true
   },
@@ -473,6 +604,10 @@
   },
   {
     "type": "keyword_union",
+    "named": true
+  },
+  {
+    "type": "keyword_version",
     "named": true
   },
   {
